@@ -21,7 +21,7 @@ my_dataframe = session.table("smoothies.public.fruit_options").select(col('FRUIT
 
 # Convert Snowpark dataframe to pandas dataframe
 pd_df = my_dataframe.to_pandas()
-st.dataframe(pd_df)
+#st.dataframe(pd_df)
 # FIXED: Removed st.stop() so app can continue
 # st.stop()
 
