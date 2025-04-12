@@ -16,12 +16,12 @@ name_on_order = st.text_input("Name on Smoothie")
 st.write('The Name on Your Smoothie will be:',name_on_order)
 session = cnx.session()
 
-#my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
+my_dataframe = session.table("smoothies.public.fruit_options").select(col('fruit_name'))
 #st.dataframe(data=my_dataframe, use_container_width=True)
 
 #convert snowpark dataframe to pandas dataframe
 pd_df = my_dataframe.to_pandas()
-st.daraframe(pd_df)
+st.dataframe(pd_df)
 st.stop()
 
 ingredients_list = st.multiselect(
